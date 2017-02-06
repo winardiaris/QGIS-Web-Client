@@ -47,7 +47,7 @@ div.olLayerDiv {
     font-size: smaller;
     font-family: sans-serif;
     background-color:white;
-    padding:1px;    
+    padding:1px;
 }
 
 /* changed by A. Neumann - different position */
@@ -59,7 +59,7 @@ div.olLayerDiv {
    font-size: xx-small;
    font-family: sans-serif;
    background-color:white;
-   padding:1px;    
+   padding:1px;
 }
 /* changed by A. Neumann - hidden because we don't want yards/miles */
 .olControlScaleLineBottom {
@@ -112,7 +112,7 @@ div.olControlMousePosition {
     right: 2px;
     top: 10px;
     cursor: pointer;
-}    
+}
 
 .olControlOverviewMapMaximizeButton {
     right: 0px;
@@ -154,12 +154,12 @@ div.olControlMousePosition {
 .olPopupContent {
     padding:5px;
     overflow: auto;
-}    
-.olControlNavToolbar { 
+}
+.olControlNavToolbar {
     width:0px;
     height:0px;
-}    
-.olControlNavToolbar div { 
+}
+.olControlNavToolbar div {
   display:block;
   width:  28px;
   height: 28px;
@@ -175,16 +175,16 @@ div.olControlMousePosition {
    height: 24px;
 
 }
-.olControlNavigationHistoryPreviousItemActive { 
+.olControlNavigationHistoryPreviousItemActive {
   background-position: 0px 0px;
 }
-.olControlNavigationHistoryPreviousItemInactive { 
+.olControlNavigationHistoryPreviousItemInactive {
    background-position: 0px -24px;
 }
-.olControlNavigationHistoryNextItemActive { 
+.olControlNavigationHistoryNextItemActive {
    background-position: -24px 0px;
 }
-.olControlNavigationHistoryNextItemInactive { 
+.olControlNavigationHistoryNextItemInactive {
    background-position: -24px -24px;
 }
 

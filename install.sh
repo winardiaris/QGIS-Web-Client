@@ -44,7 +44,7 @@ echo
 
 if [ "$AUTOACCEPT" = false ]; then
   read -p "Continue (y/n)?" choice
-  case "$choice" in 
+  case "$choice" in
     y|Y ) echo "Installing..."; AUTOACCEPTAPT='-y';;
     * ) echo "User aborted"; exit 1;;
   esac
@@ -53,9 +53,9 @@ else
 fi
 
 #install the server
-apt-get install $AUTOACCEPTAPT qgis-server apache2 libapache2-mod-fcgid libapache2-mod-php5 locate sed
-a2enmod php5
-a2enmod fcgid
+sudo apt-get install $AUTOACCEPTAPT qgis-mapserver  apache2 libapache2-mod-fcgid libapache2-mod-php5 locate sed
+sudo a2enmod php5
+sudo a2enmod fcgid
 
 #Get the QGIS web client root dir
 ROOTDIR=$( cd "$( dirname "$0" )" && pwd )
@@ -81,7 +81,7 @@ APACHEVERSION=$(echo `apachectl -v` | grep -E -o 'Apache/[[:digit:]].[[:digit:]]
 # now is x.x
 APACHEVERSION=${APACHEVERSION:7:3}
 echo "Detected apache $APACHEVERSION"
-#We are in apache 2.4+ land 
+#We are in apache 2.4+ land
 if [[ $APACHEVERSION > 2.3 ]]; then
     sed -i "s|#<ENABLE_FOR_APACHE_2_4>||g" qgis-web-client.conf
 fi

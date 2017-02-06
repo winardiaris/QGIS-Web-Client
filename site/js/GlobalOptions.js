@@ -2,7 +2,7 @@
 var lang = "en"; //for available codes see array availableLanguages in file GlobalOptions.js
 
 //Help file (must be a local file)
-var helpfile = "help_en.html";
+// var helpfile = "help_en.html";
 
 //Custom function to populate GetUrlParams variables
 var customGetUrlParamsParser = null;
@@ -10,7 +10,7 @@ var customGetUrlParamsParser = null;
 //Servername (optional) and path and name name of QGIS Server FCGI-file
 //either with or without server-name - without servername recommended for easier porting to other servers
 //do not add a ? or & after the .fcgi extension
-var serverAndCGI = "/cgi-bin/qgis_mapserv.fcgi";
+var serverAndCGI = "/wms";
 
 //Optional url for print server hosted on a different server. Default: same as above.
 // var serverAndCGI = "http://otherserver/cgi-bin/qgis_mapserv.fcgi";
@@ -38,7 +38,7 @@ var defaultIdentificationMode = "topMostHit";
 
 // use geodesic measures, i.e. not planar measures
 // this is useful if a projection with high distortion of length/area is used, eg.g. GoogleMercator
-var useGeodesicMeasurement = true;
+var useGeodesicMeasurement = false;
 
 //search box for queries while typing
 //enable to use GeoNames search
@@ -70,10 +70,6 @@ var project_map = Ext.urlDecode(window.location.search.substring(1)).map;
 //other settings can/should be set in the file GISProjectListing.js
 var enableDXFExport = true;
 
-// show the permalink button
-var enablePermalink = true;
-//use a URL shortener for your permalink function
-var permaLinkURLShortener = null; // "/wsgi/createShortPermalink.wsgi";
 
 // enable to use commercial Google and Bing layers (also add BingApiKey)
 var enableBingCommercialMaps = false;
@@ -82,9 +78,9 @@ if (enableBingCommercialMaps) {
     var bingApiKey = "add Bing api key here"; // http://msdn.microsoft.com/en-us/library/ff428642.aspx
 }
 
-var enableGoogleCommercialMaps = true;
+var enableGoogleCommercialMaps = false;
 
-var enableOSMMaps = true;
+var enableOSMMaps = false;
 
 var enableBGMaps = false;
 if (enableBingCommercialMaps || enableOSMMaps || enableGoogleCommercialMaps) {
@@ -164,7 +160,7 @@ var simpleWmsSearch = {
   ],
 //  highlightFeature: true,
 //  highlightLabel: 'name',
-  selectionLayer: 'Country',
+  selectionLayer: 'Konsesi_HPH',
   selectionZoom: 0,
   doZoomToExtent: true
 };
@@ -205,7 +201,7 @@ var mapSearchPanelConfigs = {
 mapSearchPanelConfigs[project_map] = [simpleWmsSearch, urlRewriteSearch];
 
 //templates to define tooltips for a layer, to be shown on hover identify. The layer fields must be wrapped inside <%%> special tags.
-//if a layers field is found with the name "tooltip" its content will have precedence over this configuration 
+//if a layers field is found with the name "tooltip" its content will have precedence over this configuration
 var tooltipTemplates = {
 	'Country':{
 		template: "Look for the country on Google Search: <a href='http://www.google.it/#output=search&q=<%name%>' target='_blank'><%name%></a>"
@@ -231,7 +227,7 @@ var mapSearchPanelOutputRegion = 'popup' ; // Possible values: default,right,bot
 //note that you have to also link a GISProjectListing.js file containing a valid
 //project listing structure - the root object is called 'gis_projects'
 //have a look at the template file and documentation for the correct json structure
-var mapThemeSwitcherActive = true;
+var mapThemeSwitcherActive = false;
 //you can provide an alternative template for the theme-switcher - see also file ThemeSwitcher.js (ThemeSwitcher.prototype.initialize)
 var themeSwitcherTemplate = null;
 
@@ -246,7 +242,7 @@ var headerTermsOfUseText = null; // set null for no link
 var headerTermsOfUseLink = ""; // URL to terms of use
 
 //language switcher in qgiswebclient.html
-var enableLangSwitcher = true;
+var enableLangSwitcher = false;
 
 // optional project title per map name
 var projectTitles = {
@@ -270,7 +266,7 @@ var layerImageFormats = [
 */
 
 //EPSG projection code of your QGIS project
-var authid = "EPSG:"+3857;
+var authid = "EPSG:"+4326;
 
 //background transparency for the QGIS Server generated layer (commercial background layers not effected)
 //set to true if you want the background to be transparent, layer image will be bigger (32 vs 24bit)
@@ -332,7 +328,7 @@ else {
 }
 
 // prevent the user from choosing a print resolution
-// if fixedPrintResolution = null, the user is allowed to choose the print resolution. 
+// if fixedPrintResolution = null, the user is allowed to choose the print resolution.
 var fixedPrintResolution = null; // for a fixed resolution of 200dpi fill 200
 
 //print options - scales and dpi
