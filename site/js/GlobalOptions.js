@@ -280,8 +280,8 @@ var ZOOM_LEVELS = 22;
 var MapOptions = {
   projection: new OpenLayers.Projection(authid),
   units: "m",
-//  maxScale:50,
-//  minScale:40000000,
+  maxScale:250,
+  minScale:7221282,
   numZoomLevels:ZOOM_LEVELS,
   fractionalZoom: !enableWmtsBaseLayers && !enableBGMaps,
   transitionEffect:"resize",
