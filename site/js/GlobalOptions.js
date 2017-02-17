@@ -45,8 +45,8 @@ var useGeodesicMeasurement = false;
 var useGeoNamesSearchBox = false;
 var geoNamesUserName = 'insert your geonames user name';
 //URL for custom search scripts
-var searchBoxQueryURL = null; // "/wsgi/search.wsgi?query=";
-var searchBoxGetGeomURL = null; // "/wsgi/getSearchGeom.wsgi";
+var searchBoxQueryURL = "/wsgi/search.wsgi?"; // "/wsgi/search.wsgi?query=";
+var searchBoxGetGeomURL = "/wsgi/getSearchGeom.wsgi"; // "/wsgi/getSearchGeom.wsgi";
 
 // use QGIS WMS highlight for selected search result in search box
 var enableSearchBoxWmsHighlight = false;
@@ -160,7 +160,7 @@ var simpleWmsSearch = {
   ],
 //  highlightFeature: true,
 //  highlightLabel: 'name',
-  selectionLayer: 'Konsesi_HPH',
+  selectionLayer: 'Country',
   selectionZoom: 0,
   doZoomToExtent: true
 };
