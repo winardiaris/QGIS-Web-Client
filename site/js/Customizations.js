@@ -49,6 +49,7 @@ function customBeforeMapInit() {
 //
 //  add the layer to the array of background layers
 //  baseLayers.push(myBackgroundLayer);
+  window.setTimeout(moveToPapua, 3000);
 }
 function dispatch(target, eventType, charCode) {
    var evt = document.createEvent("KeyboardEvent");
@@ -70,7 +71,7 @@ function dispatch(target, eventType, charCode) {
 
 function moveToPapua(){
   var id = document.getElementById("CoordinateTextField");
-  id.value = "136, -4";
+  id.value = "136,-4";
   id.focus();
 
   // id.onkeydown = id.onkeyup = id.onkeypress = function() {console.log(arguments)}
@@ -97,7 +98,6 @@ function customAfterMapInit() {
 //
 //     geoExtMap.map.addControl(openlayersClickEvent);
 
-  window.setTimeout(moveToPapua, 3000);
 }
 
 // called at the end of GetMapUrls
