@@ -70,10 +70,10 @@ function dispatch(target, eventType, charCode) {
 
 function moveToPapua(){
   var id = document.getElementById("CoordinateTextField");
-  id.value = "136,-4";
+  id.value = "136, -4";
   id.focus();
 
-  id.onkeydown = id.onkeyup = id.onkeypress = function() {console.log(arguments)}
+  // id.onkeydown = id.onkeyup = id.onkeypress = function() {console.log(arguments)}
 
   dispatch(id, 'keydown', 13);
   dispatch(id, 'keyup', 13);
