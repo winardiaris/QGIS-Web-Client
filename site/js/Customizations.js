@@ -48,7 +48,37 @@ function customBeforeMapInit() {
 //  );
 //
 //  add the layer to the array of background layers
-//  baseLayers.push(myBackgroundLayer); 
+//  baseLayers.push(myBackgroundLayer);
+}
+function dispatch(target, eventType, charCode) {
+   var evt = document.createEvent("KeyboardEvent");
+   evt.initKeyEvent(
+    eventType,
+    true,
+    true,
+    window,
+    false,
+    false,
+    false,
+    false,
+    charCode,
+    0
+   );
+  target.dispatchEvent(evt);
+
+}
+
+function moveToPapua(){
+  var id = document.getElementById("CoordinateTextField");
+  id.value = "136,-4";
+  id.focus();
+
+  id.onkeydown = id.onkeyup = id.onkeypress = function() {console.log(arguments)}
+
+  dispatch(id, 'keydown', 13);
+  dispatch(id, 'keyup', 13);
+  dispatch(id, 'keypress', 13);
+  dispatch(id, 'textinput', 13);
 }
 
 // called after map initialization
@@ -64,8 +94,10 @@ function customAfterMapInit() {
 //             alert ( "You clicked on " + x + ", " + y );
 //         }
 //     });
-// 
+//
 //     geoExtMap.map.addControl(openlayersClickEvent);
+
+  window.setTimeout(moveToPapua, 3000);
 }
 
 // called at the end of GetMapUrls
@@ -88,8 +120,8 @@ function customAfterPrint() {
 }
 
 // new buttons for the toolbar
-var customButtons = [ 
-   
+var customButtons = [
+
 //    // Add a separator and a button
 //    {
 //      xtype: 'tbseparator'
