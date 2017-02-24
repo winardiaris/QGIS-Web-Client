@@ -266,7 +266,8 @@ var layerImageFormats = [
 */
 
 //EPSG projection code of your QGIS project
-var authid = "EPSG:"+4326;
+// var authid = "EPSG:"+4326;
+var authid = "EPSG:"+23840;
 
 //background transparency for the QGIS Server generated layer (commercial background layers not effected)
 //set to true if you want the background to be transparent, layer image will be bigger (32 vs 24bit)
@@ -280,8 +281,9 @@ var ZOOM_LEVELS = 22;
 var MapOptions = {
   projection: new OpenLayers.Projection(authid),
   units: "m",
-  maxScale:250,
-  minScale:7221282,
+  maxScale:350,
+  // minScale:7221282,
+  minScale:8997828,
   numZoomLevels:ZOOM_LEVELS,
   fractionalZoom: !enableWmtsBaseLayers && !enableBGMaps,
   transitionEffect:"resize",

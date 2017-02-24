@@ -49,7 +49,7 @@ function customBeforeMapInit() {
 //
 //  add the layer to the array of background layers
 //  baseLayers.push(myBackgroundLayer);
-  window.setTimeout(moveToPapua, 3000);
+  // window.setTimeout(moveToPapua, 3000);
 }
 function dispatch(target, eventType, charCode) {
    var evt = document.createEvent("KeyboardEvent");
