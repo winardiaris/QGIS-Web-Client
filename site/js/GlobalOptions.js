@@ -232,7 +232,7 @@ var mapThemeSwitcherActive = false;
 var themeSwitcherTemplate = null;
 
 //first part of titlebar text
-var titleBarText = "GIS-Browser - "; // will be appended with project title
+var titleBarText = ""; // will be appended with project title
 
 // header logo image and link
 var headerLogoImg = null; // path to image, set null for no logo
@@ -266,8 +266,8 @@ var layerImageFormats = [
 */
 
 //EPSG projection code of your QGIS project
-// var authid = "EPSG:"+4326;
-var authid = "EPSG:"+23845;
+ var authid = "EPSG:"+4326;
+//var authid = "EPSG:"+23845;
 
 //background transparency for the QGIS Server generated layer (commercial background layers not effected)
 //set to true if you want the background to be transparent, layer image will be bigger (32 vs 24bit)
@@ -282,7 +282,7 @@ var MapOptions = {
   projection: new OpenLayers.Projection(authid),
   units: "m",
   maxScale:350,
-  // minScale:7221282,
+  //minScale:7221282,
   minScale:8997828,
   numZoomLevels:ZOOM_LEVELS,
   fractionalZoom: !enableWmtsBaseLayers && !enableBGMaps,

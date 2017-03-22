@@ -53,8 +53,8 @@ else
 fi
 
 #install the server
-sudo apt-get install $AUTOACCEPTAPT qgis-mapserver  apache2 libapache2-mod-fcgid libapache2-mod-php5 locate sed
-sudo a2enmod php5
+sudo apt-get install $AUTOACCEPTAPT qgis-mapserver  apache2 libapache2-mod-fcgid libapache2-mod-php5.6 locate sed
+sudo a2enmod php5.6
 sudo a2enmod fcgid
 
 #Get the QGIS web client root dir

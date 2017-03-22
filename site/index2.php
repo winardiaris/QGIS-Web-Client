@@ -1,5 +1,5 @@
 <?php
-    $PROJECTS_DIR = '/home/vagrant/QGIS_projects/'
+    $PROJECTS_DIR = '/var/www/QGIS_projects/'
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
