@@ -85,6 +85,13 @@ function moveToPapua(){
 // called after map initialization
 function customAfterMapInit() {
 
+  var blog = document.createElement('a');
+  blog.setAttribute('href','http://matapapua.org/');
+  blog.className = 'blog';
+  blog.innerHTML = 'Blog';
+
+  jQuery('.x-toolbar-left').first().append(blog);
+
 //     // Create a new map control based on Control Click Event
 //     openlayersClickEvent = new OpenLayers.Control.Click( {
 //         trigger: function(e) {
@@ -97,6 +104,7 @@ function customAfterMapInit() {
 //     });
 //
 //     geoExtMap.map.addControl(openlayersClickEvent);
+
 
 }
 
